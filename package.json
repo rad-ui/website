@@ -10,7 +10,7 @@
     "update-rad": "npm update @radui/ui"
   },
   "dependencies": {
-    "@radui/ui": "^0.0.18",
+    "@radui/ui": "^0.0.19",
     "@types/node": "20.5.9",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",

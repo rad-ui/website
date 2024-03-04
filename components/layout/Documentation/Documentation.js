@@ -3,6 +3,7 @@ import Heading from "@radui/ui/Heading"
 import Link from "@radui/ui/Link"
 import Separator from "@radui/ui/Separator"
 import Badge from "@radui/ui/Badge"
+import Table from "@radui/ui/Table"
 
 import CodeBlock from "./helpers/CodeBlock"
 import ComponentHero from "./helpers/ComponentHero/ComponentHero"
@@ -44,6 +45,28 @@ const Documentation = ({ title = "", description = "", currentPage = undefined, 
     </div>
 }
 
+const DocsTable = ({ children }) => {
+
+    const columns = [
+        {name: 'Name', key: 'name'},
+        {name: 'Age', key: 'age'},
+    ];
+
+    const data = [
+        {name: 'John Doe', age: 25, key: '1'},
+        {name: 'Jane Doe', age: 24, key: '2'},
+        {name: 'John Smith', age: 30, key: '3'},
+        {name: 'Jane Smith', age: 29, key: '4'},
+    ];
+
+    return <div className='mb-20'>
+        <Heading as="h6" className="mb-4">API</Heading>
+        <Table columns={columns} data={data} >
+        {children}
+    </Table>
+    </div>
+}
+
 const Section = ({ title = "", children }) => {
     return <div>
         <Heading as="h6" className="mb-2 mt-8">{title}</Heading>
@@ -70,6 +93,7 @@ Documentation.Section = Section;
 Documentation.ComponentHero = ComponentHero;
 Documentation.ComponentFeatures = ComponentFeatures;
 Documentation.CodeBlock = CodeBlock;
+Documentation.Table = DocsTable;
 
 
 export default Documentation;

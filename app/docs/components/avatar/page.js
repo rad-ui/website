@@ -23,8 +23,10 @@ const AvatarDocs = () => {
                 // "Accepts a custom fallback",
                 "SSR compatible",
             ]} >
-
             </Documentation.ComponentFeatures>
+            <Documentation.Table>
+                Table Here
+            </Documentation.Table>
         </Documentation>
     </div>
 }
